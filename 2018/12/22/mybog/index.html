@@ -79,16 +79,20 @@
 
 
 
+<meta name="description" content="一、react优势 虚拟DOM，HTML写在js里 一切皆组件，支持自定义 单向数据流，跨平台运行二、组件Component 创建组件的三种方式： es6创建 ：React.component es5创建 : React.createClass 函数式定义的无状态组件：无状态的组件形式上表现为一个只待油render方法的组件类，通过函数形式或者箭头函数，该组件无state状态建议选择第一个和第三个">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react基础整理">
 <meta property="og:url" content="http://yoursite.com/2018/12/22/mybog/index.html">
 <meta property="og:site_name" content="前端小白的进阶之路">
+<meta property="og:description" content="一、react优势 虚拟DOM，HTML写在js里 一切皆组件，支持自定义 单向数据流，跨平台运行二、组件Component 创建组件的三种方式： es6创建 ：React.component es5创建 : React.createClass 函数式定义的无状态组件：无状态的组件形式上表现为一个只待油render方法的组件类，通过函数形式或者箭头函数，该组件无state状态建议选择第一个和第三个">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/12/22/mybog/zhouqi.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/12/22/mybog/rn.png">
-<meta property="og:updated_time" content="2018-12-23T10:23:58.288Z">
+<meta property="og:updated_time" content="2018-12-23T10:26:00.030Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react基础整理">
-<meta name="twitter:image" content="http://yoursite.com/2018/12/22/mybog/rn.png">
+<meta name="twitter:description" content="一、react优势 虚拟DOM，HTML写在js里 一切皆组件，支持自定义 单向数据流，跨平台运行二、组件Component 创建组件的三种方式： es6创建 ：React.component es5创建 : React.createClass 函数式定义的无状态组件：无状态的组件形式上表现为一个只待油render方法的组件类，通过函数形式或者箭头函数，该组件无state状态建议选择第一个和第三个">
+<meta name="twitter:image" content="http://yoursite.com/2018/12/22/mybog/zhouqi.jpg">
 
 
 
@@ -328,7 +332,24 @@
       
 
       
-        <p><img src="/2018/12/22/mybog/rn.png" alt="react生命周期详解"></p>
+        <h3 id="一、react优势"><a href="#一、react优势" class="headerlink" title="一、react优势"></a>一、react优势</h3><ul>
+<li>虚拟DOM，HTML写在js里</li>
+<li>一切皆组件，支持自定义</li>
+<li>单向数据流，跨平台运行<h3 id="二、组件Component"><a href="#二、组件Component" class="headerlink" title="二、组件Component"></a>二、组件Component</h3></li>
+<li>创建组件的三种方式：<ol>
+<li>es6创建 ：React.component</li>
+<li>es5创建 : React.createClass</li>
+<li>函数式定义的无状态组件：无状态的组件形式上表现为一个只待油render方法的组件类，通过函数形式或者箭头函数，该组件无state状态<br>建议选择第一个和第三个</li>
+</ol>
+</li>
+<li>组件的特点<ol>
+<li>组件中只能有一个根结点</li>
+<li>组件首字母必须大写，否则会被解析成html标签</li>
+<li>具有可重用、可组合、可维护特征</li>
+<li>对应的标签语法和html标签用法一致，可加入任意属性<br>More info: <a href="https://liuwan12.github.io/2018/12/22/react%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86/" target="_blank" rel="noopener">more</a><h3 id="三、组件的生命周期"><a href="#三、组件的生命周期" class="headerlink" title="三、组件的生命周期"></a>三、组件的生命周期</h3><img src="/2018/12/22/mybog/zhouqi.jpg" alt="生命周期函数"><br><img src="/2018/12/22/mybog/rn.png" alt="react生命周期详解"></li>
+</ol>
+</li>
+</ul>
 
       
     </div>
@@ -352,10 +373,6 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/12/22/react基础整理/" rel="next" title="react基础整理">
-                <i class="fa fa-chevron-left"></i> react基础整理
-              </a>
             
           </div>
 
@@ -417,8 +434,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -435,7 +461,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -462,6 +488,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、react优势"><span class="nav-number">1.</span> <span class="nav-text">一、react优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、组件Component"><span class="nav-number">2.</span> <span class="nav-text">二、组件Component</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、组件的生命周期"><span class="nav-number">3.</span> <span class="nav-text">三、组件的生命周期</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
