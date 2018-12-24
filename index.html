@@ -466,13 +466,10 @@ es5创建
       
         
           
-          h5缓存分为localStorage、sessionStorage、cookie等###一、localStorage
+          目前H5一共有6种缓存机制####一、浏览器缓存机制    指通过Http协议头里的Cache-Control(Expires)和last-Modified(Etag)等字段控制缓存的机制
 
-永久性的本地存储，存储在客户端的浏览器上，不会过期，直到手动删除，采用键值对的方式进行存储，存储方式为字符串API有：
-
-
-localStorage.setItem()存储数据
-l
+Cache-Control 用于控制文本在本地缓存有效时长
+Last-Modified 标识文件在服务器上的
           ...
           <!--noindex-->
           <div class="post-button text-center">
