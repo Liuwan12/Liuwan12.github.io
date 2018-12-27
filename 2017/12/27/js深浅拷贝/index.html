@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="配置名字和邮箱 git config –global user.name “用户名” git config –global user.email “邮箱” git init 初始化仓库  git status 查看仓库状态 克隆代码    git clone 路径  本地新建分支： git branch 分支名 git branch 查看本地所有分支 git branch -a 查看本地和远程所有">
+<meta name="description" content="一、js数据类型 javaScritp的数据类型有：数值类型、字符串类型、布尔类型、null、undefined、对象(数组、正则表达式、日期、函数)，大致分成两种：基本数据类型和引用数据类型 基本数据类型保存在栈内存，引用类型保存在堆内存中。根本原因在于保存在栈内存的必须是大小固定的数据，引用类型的大小不固定，只能保存在堆内存中，但是可以把它的地址写在栈内存中以供我们访问  二、浅拷贝 只是拷贝">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git常用命令">
-<meta property="og:url" content="http://yoursite.com/2017/12/24/git常用命令/index.html">
+<meta property="og:title" content="js深浅拷贝">
+<meta property="og:url" content="http://yoursite.com/2017/12/27/js深浅拷贝/index.html">
 <meta property="og:site_name" content="前端小白的进阶之路">
-<meta property="og:description" content="配置名字和邮箱 git config –global user.name “用户名” git config –global user.email “邮箱” git init 初始化仓库  git status 查看仓库状态 克隆代码    git clone 路径  本地新建分支： git branch 分支名 git branch 查看本地所有分支 git branch -a 查看本地和远程所有">
+<meta property="og:description" content="一、js数据类型 javaScritp的数据类型有：数值类型、字符串类型、布尔类型、null、undefined、对象(数组、正则表达式、日期、函数)，大致分成两种：基本数据类型和引用数据类型 基本数据类型保存在栈内存，引用类型保存在堆内存中。根本原因在于保存在栈内存的必须是大小固定的数据，引用类型的大小不固定，只能保存在堆内存中，但是可以把它的地址写在栈内存中以供我们访问  二、浅拷贝 只是拷贝">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-26T02:12:28.634Z">
+<meta property="og:updated_time" content="2018-12-27T10:57:04.399Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git常用命令">
-<meta name="twitter:description" content="配置名字和邮箱 git config –global user.name “用户名” git config –global user.email “邮箱” git init 初始化仓库  git status 查看仓库状态 克隆代码    git clone 路径  本地新建分支： git branch 分支名 git branch 查看本地所有分支 git branch -a 查看本地和远程所有">
+<meta name="twitter:title" content="js深浅拷贝">
+<meta name="twitter:description" content="一、js数据类型 javaScritp的数据类型有：数值类型、字符串类型、布尔类型、null、undefined、对象(数组、正则表达式、日期、函数)，大致分成两种：基本数据类型和引用数据类型 基本数据类型保存在栈内存，引用类型保存在堆内存中。根本原因在于保存在栈内存的必须是大小固定的数据，引用类型的大小不固定，只能保存在堆内存中，但是可以把它的地址写在栈内存中以供我们访问  二、浅拷贝 只是拷贝">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/24/git常用命令/">
+  <link rel="canonical" href="http://yoursite.com/2017/12/27/js深浅拷贝/">
 
 
 
 
 
-  <title>git常用命令 | 前端小白的进阶之路</title>
+  <title>js深浅拷贝 | 前端小白的进阶之路</title>
   
 
 
@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/24/git常用命令/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/27/js深浅拷贝/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘大碗">
@@ -279,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git常用命令</h1>
+          <h1 class="post-title" itemprop="name headline">js深浅拷贝</h1>
         
 
         <div class="post-meta">
@@ -291,8 +291,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-24T22:52:28+08:00">
-                2017-12-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-27T18:28:26+08:00">
+                2017-12-27
               </time>
             
 
@@ -329,39 +329,37 @@
       
 
       
-        <h3 id="配置名字和邮箱"><a href="#配置名字和邮箱" class="headerlink" title="配置名字和邮箱"></a>配置名字和邮箱</h3><ul>
-<li>git config –global user.name “用户名”</li>
-<li>git config –global user.email “邮箱”</li>
-<li>git init 初始化仓库</li>
+        <h3 id="一、js数据类型"><a href="#一、js数据类型" class="headerlink" title="一、js数据类型"></a>一、js数据类型</h3><ul>
+<li>javaScritp的数据类型有：数值类型、字符串类型、布尔类型、null、undefined、对象(数组、正则表达式、日期、函数)，大致分成两种：基本数据类型和引用数据类型</li>
+<li>基本数据类型保存在栈内存，引用类型保存在堆内存中。根本原因在于保存在栈内存的必须是大小固定的数据，引用类型的大小不固定，只能保存在堆内存中，但是可以把它的地址写在栈内存中以供我们访问</li>
 </ul>
-<h3 id="git-status-查看仓库状态"><a href="#git-status-查看仓库状态" class="headerlink" title="git status 查看仓库状态"></a>git status 查看仓库状态</h3><ul>
-<li>克隆代码    git clone 路径 </li>
-<li>本地新建分支： git branch 分支名</li>
-<li>git branch 查看本地所有分支</li>
-<li>git branch -a 查看本地和远程所有分支</li>
-<li>git checkout 分支名    切换分支</li>
+<h3 id="二、浅拷贝"><a href="#二、浅拷贝" class="headerlink" title="二、浅拷贝"></a>二、浅拷贝</h3><ul>
+<li>只是拷贝基本的数据类型，浅拷贝只复制指向某个对象的指针，而不复制对象本身，新旧对象还是共享同一块内存<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function simpleClone(initalObj) &#123;    </span><br><span class="line">          var obj = &#123;&#125;;    </span><br><span class="line">          for ( var i in initalObj) &#123;</span><br><span class="line">            obj[i] = initalObj[i];</span><br><span class="line">          &#125;    </span><br><span class="line">          return obj;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h3><ul>
-<li>git pull/git init . // 初始化本地项目，在本地添加.git文件</li>
-<li>git add .</li>
-<li>git commit -m “说明 “    </li>
-<li>git push </li>
-<li>git关联远程仓库  ：     git remote add origin 远程仓库名</li>
-<li>git diff 查看修改内容</li>
-<li>git remote rm 仓库名  删除仓库</li>
-<li>git pull更新</li>
+<h3 id="三、深拷贝"><a href="#三、深拷贝" class="headerlink" title="三、深拷贝"></a>三、深拷贝</h3><ul>
+<li>对目标的完全拷贝,创造一个一模一样的对象，修改新对象不会改到原对象</li>
+<li>实现方法<ol>
+<li>利用 JSON 对象中的 parse 和 stringify (js值和JSon字符串相互转换)<ul>
+<li>JSON.stringify 是将一个 JavaScript 值转成一个 JSON 字符串</li>
+<li>JSON.parse 是将一个 JSON 字符串转成一个 JavaScript 值或对象</li>
+<li>undefined、function、symbol 会在转换过程中被忽略，所以对象中含有一个函数时（很常见），就不能用这个方法进行深拷贝</li>
 </ul>
-<h3 id="克隆远程某一个特定分支"><a href="#克隆远程某一个特定分支" class="headerlink" title="克隆远程某一个特定分支"></a>克隆远程某一个特定分支</h3><ul>
-<li>git clone -b 分支名  仓库名  <h3 id="关联分支到远程仓库"><a href="#关联分支到远程仓库" class="headerlink" title="关联分支到远程仓库"></a>关联分支到远程仓库</h3></li>
-<li>生成ssh-key： ssh-keygen -t rsa -C “<a href="mailto:1027968784@qq.com" target="_blank" rel="noopener">1027968784@qq.com</a>“；然后将本地id_rsa.pub文件夹的内容复制到远程再重新提交</li>
-<li>git push -u origin master</li>
+</li>
+<li>利用递归来实现每一层都重新创建对象并赋值</li>
+</ol>
+</li>
 </ul>
-<h3 id="合并分支到master"><a href="#合并分支到master" class="headerlink" title="合并分支到master"></a>合并分支到master</h3><ul>
-<li>先切换到master  git checkout master</li>
-<li>git pull origin master 把远程master上的分支先拉下来</li>
-<li>然后把dev分支合并到master git merge dev</li>
-<li>查看状态status</li>
-<li>git push origin master</li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const originObj = &#123;a:&apos;a&apos;,b:&apos;b&apos;,c:[1,2,3],d:&#123;dd:&apos;dd&apos;&#125;&#125;;</span><br><span class="line">const cloneObj = JSON.parse(JSON.stringify(originObj));</span><br><span class="line">console.log(cloneObj === originObj); // false</span><br></pre></td></tr></table></figure>
+<p>递归实现对象深拷贝<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function deepClone(source)&#123;</span><br><span class="line">    const targetObj = source.constructor === Array ? [] : &#123;&#125;; // 判断复制的目标是数组还是对象</span><br><span class="line">    for(let keys in source)&#123; // 遍历目标</span><br><span class="line">        if(source.hasOwnProperty(keys))&#123;</span><br><span class="line">            if(source[keys] &amp;&amp; typeof source[keys] === &apos;object&apos;)&#123; // 如果值是对象，就递归一下</span><br><span class="line">                targetObj[keys] = source[keys].constructor === Array ? [] : &#123;&#125;;</span><br><span class="line">                targetObj[keys] = deepClone(source[keys]);</span><br><span class="line">            &#125;else&#123; // 如果不是，就直接赋值</span><br><span class="line">                targetObj[keys] = source[keys];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; </span><br><span class="line">    &#125;</span><br><span class="line"> return targetObj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="四、concat和slice"><a href="#四、concat和slice" class="headerlink" title="四、concat和slice"></a>四、concat和slice</h3><ul>
+<li>在 JavaScript 中，数组有两个方法 concat和slice是可以实现对原数组的拷贝的，这两个方法都不会修改原数组，而是返回一个修改后的新数组。</li>
+<li>concat和slice只是对数组的第一层进行深拷贝</li>
+</ul>
+<h3 id="五、Object-assign-和…展开运算符"><a href="#五、Object-assign-和…展开运算符" class="headerlink" title="五、Object.assign()和…展开运算符"></a>五、Object.assign()和…展开运算符</h3><ul>
+<li>Object.assign() 拷贝的是属性值。假如源对象的属性值是一个指向对象的引用，它也只拷贝那个引用值。</li>
+<li>… 实现的是对象第一层的深拷贝。后面的只是拷贝的引用值。</li>
+<li>赋值运算符 = 实现的是浅拷贝，只拷贝对象的引用值</li>
 </ul>
 
       
@@ -387,8 +385,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/20/JS基础学习1/" rel="next" title="JS基础学习1">
-                <i class="fa fa-chevron-left"></i> JS基础学习1
+              <a href="/2017/12/24/git常用命令/" rel="next" title="git常用命令">
+                <i class="fa fa-chevron-left"></i> git常用命令
               </a>
             
           </div>
@@ -397,8 +395,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/27/js深浅拷贝/" rel="prev" title="js深浅拷贝">
-                js深浅拷贝 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/24/h5缓存/" rel="prev" title="H5缓存机制">
+                H5缓存机制 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -515,7 +513,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置名字和邮箱"><span class="nav-number">1.</span> <span class="nav-text">配置名字和邮箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-status-查看仓库状态"><span class="nav-number">2.</span> <span class="nav-text">git status 查看仓库状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交代码"><span class="nav-number">3.</span> <span class="nav-text">提交代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#克隆远程某一个特定分支"><span class="nav-number">4.</span> <span class="nav-text">克隆远程某一个特定分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关联分支到远程仓库"><span class="nav-number">5.</span> <span class="nav-text">关联分支到远程仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合并分支到master"><span class="nav-number">6.</span> <span class="nav-text">合并分支到master</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、js数据类型"><span class="nav-number">1.</span> <span class="nav-text">一、js数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、浅拷贝"><span class="nav-number">2.</span> <span class="nav-text">二、浅拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、深拷贝"><span class="nav-number">3.</span> <span class="nav-text">三、深拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、concat和slice"><span class="nav-number">4.</span> <span class="nav-text">四、concat和slice</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、Object-assign-和…展开运算符"><span class="nav-number">5.</span> <span class="nav-text">五、Object.assign()和…展开运算符</span></a></li></ol></div>
             
 
           </div>
