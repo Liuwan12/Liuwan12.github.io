@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="目前H5一共有6种缓存机制####一、浏览器缓存机制    指通过Http协议头里的Cache-Control(Expires)和last-Modified(Etag)等字段控制缓存的机制  Cache-Control 用于控制文本在本地缓存有效时长 Last-Modified 标识文件在服务器上的最新更新时间 Cache-Control 通常与 Last-Modified 一起使用。一个用于控制">
+<meta name="description" content="一、概念 webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析 模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="H5缓存机制">
-<meta property="og:url" content="http://yoursite.com/2018/01/24/h5缓存/index.html">
+<meta property="og:title" content="框架学习之webpack">
+<meta property="og:url" content="http://yoursite.com/2017/12/29/框架学习之webpack/index.html">
 <meta property="og:site_name" content="前端小白的进阶之路">
-<meta property="og:description" content="目前H5一共有6种缓存机制####一、浏览器缓存机制    指通过Http协议头里的Cache-Control(Expires)和last-Modified(Etag)等字段控制缓存的机制  Cache-Control 用于控制文本在本地缓存有效时长 Last-Modified 标识文件在服务器上的最新更新时间 Cache-Control 通常与 Last-Modified 一起使用。一个用于控制">
+<meta property="og:description" content="一、概念 webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析 模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.js">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-24T13:31:54.025Z">
+<meta property="og:updated_time" content="2018-12-29T08:43:05.465Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="H5缓存机制">
-<meta name="twitter:description" content="目前H5一共有6种缓存机制####一、浏览器缓存机制    指通过Http协议头里的Cache-Control(Expires)和last-Modified(Etag)等字段控制缓存的机制  Cache-Control 用于控制文本在本地缓存有效时长 Last-Modified 标识文件在服务器上的最新更新时间 Cache-Control 通常与 Last-Modified 一起使用。一个用于控制">
+<meta name="twitter:title" content="框架学习之webpack">
+<meta name="twitter:description" content="一、概念 webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析 模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.js">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/24/h5缓存/">
+  <link rel="canonical" href="http://yoursite.com/2017/12/29/框架学习之webpack/">
 
 
 
 
 
-  <title>H5缓存机制 | 前端小白的进阶之路</title>
+  <title>框架学习之webpack | 前端小白的进阶之路</title>
   
 
 
@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/24/h5缓存/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/29/框架学习之webpack/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘大碗">
@@ -279,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">H5缓存机制</h1>
+          <h1 class="post-title" itemprop="name headline">框架学习之webpack</h1>
         
 
         <div class="post-meta">
@@ -291,8 +291,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-24T18:20:36+08:00">
-                2018-01-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-29T15:09:26+08:00">
+                2017-12-29
               </time>
             
 
@@ -329,53 +329,28 @@
       
 
       
-        <h3 id="目前H5一共有6种缓存机制"><a href="#目前H5一共有6种缓存机制" class="headerlink" title="目前H5一共有6种缓存机制"></a>目前H5一共有6种缓存机制</h3><p>####一、浏览器缓存机制<br>    指通过Http协议头里的Cache-Control(Expires)和last-Modified(Etag)等字段控制缓存的机制</p>
-<ul>
-<li><strong>Cache-Control</strong> 用于控制文本在本地缓存有效时长</li>
-<li><strong>Last-Modified</strong> 标识文件在服务器上的最新更新时间</li>
-<li>Cache-Control 通常与 Last-Modified 一起使用。一个用于控制缓存有效时间，一个在缓存失效后，向服务查询是否有更新</li>
-<li>Cache-Control 还有一个同功能的字段：<strong>Expires</strong>。Expires 的值一个绝对的时间点，如：Expires: Thu, 10 Nov 2015 08:45:11 GMT，表示在这个时间点之前，缓存都是有效的。</li>
-<li><strong>Etag</strong> 也是和 Last-Modified 一样，对文件进行标识的字段。不同的是，Etag 的取值是一个对文件进行标识的特征字串<h4 id="二、Dom-Storgage-Web-Storage-存储缓存，缓存分为localStorage、sessionStorage、cookie等"><a href="#二、Dom-Storgage-Web-Storage-存储缓存，缓存分为localStorage、sessionStorage、cookie等" class="headerlink" title="二、Dom Storgage(Web Storage)存储缓存，缓存分为localStorage、sessionStorage、cookie等"></a>二、Dom Storgage(Web Storage)存储缓存，缓存分为localStorage、sessionStorage、cookie等</h4><ul>
-<li>localStorage</li>
+        <h3 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h3><ul>
+<li>webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析<ul>
+<li>模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.js 更贴近 CommonJS Modules/1.1 和 Node Modules 规范。</li>
+<li>不仅实现了js文件的异步加载，还管理了模块之间的倚赖性</li>
+<li>对于依赖的模块，AMD 是提前执行，CMD 是延迟执行。不过 RequireJS 从 2.0 开始，也改成可以延迟执行（根据写法不同，处理方式不同）。CMD 推崇 as lazy as possible.</li>
+<li>CMD 推崇依赖就近，AMD 推崇依赖前置。</li>
 </ul>
 </li>
-</ul>
-<ul>
-<li>永久性的本地存储，存储在客户端的浏览器上，不会过期，直到手动删除，采用键值对的方式进行存储，存储方式为字符串<br>API有：</li>
+<li>安装npm install webpack webpack-dev-server –save-dev</li>
+<li>bundle是由webpack打包出来的文件，chunk是在webpack进行模块的依赖分析时，分割出来的代码块。module是开发中的单个模块</li>
+<li>Loader是用来告诉webpack如何转化处理某一类型的文件，并且引入到打包出的文件中。plugin是用来自定义webpack打包过程的方式</li>
+<li>loaders负责的是处理源文件的如css、jsx，一次处理一个文件。而plugins并不是直接操作单个文件，它直接对整个构建过程起作用<br>loader的作用</li>
 </ul>
 <ol>
-<li>localStorage.setItem()存储数据</li>
-<li>localStorage.getItem()获取数据，使用localStorage.valueOf()获取全部数据</li>
-<li>localStorage.removeItem(key) 删除数据</li>
-<li>localStorage.clear()清空全部数据，localStorage.length 获取本地存储数据数量</li>
-<li>localStorage.key(N)获取第N个数据的key键值</li>
+<li>实现对不同格式的文件的处理，比如说将scss转换为css，或者typescript转化为js</li>
+<li>转换这些文件，从而使其能够被添加到依赖图中<h3 id="二、webpack-dev-server"><a href="#二、webpack-dev-server" class="headerlink" title="二、webpack-dev-server"></a>二、webpack-dev-server</h3></li>
 </ol>
 <ul>
-<li><p>SessionStorage</p>
-<ul>
-<li>用于本地存储一个会话中的数据，只有在同一个会话中的页面才能访问，结束回话窗口关闭后数据就会消失，属于会话级别的存储</li>
+<li>webpack-dev-server使用内存来存储webpack开发环境下的打包文件，并且可以使用模块热更新，他比传统的http服务对开发更加简单高效<br><strong> 模块热更新 </strong></li>
+<li>模块热更新是webpack的一个功能，它可以使得代码修改过后不用刷新浏览器就可以更新，是高级版的自动刷新浏览器<h3 id="三、入口文件-entry"><a href="#三、入口文件-entry" class="headerlink" title="三、入口文件 entry"></a>三、入口文件 entry</h3></li>
 </ul>
-</li>
-<li><p>cookie</p>
-<ul>
-<li>cookie数据始终在同源的http请求中携带，cookie在浏览器和服务器端来回传递 </li>
-<li>存储大小要求不能超过4k，sessionStorage和localStorage存储大小比cookie大，可以达到5M甚至更大，不同浏览器设置不同</li>
-<li>生命周期：cookie的生命周期一般在其设置的过期时间之前有效</li>
-<li>作用域的区别； sessionStorage不在不同浏览器共享，localStorage在所有同源窗口中共享，cookie在所有同源窗口中是共享的</li>
-</ul>
-</li>
-<li>webStorage的好处<ul>
-<li>减少网络流量： 使用webStorage将数据缓存在本地，减少不必要的请求</li>
-<li>快速显示数据</li>
-<li>临时存储</li>
-</ul>
-</li>
-</ul>
-<h4 id="三、Web-SQL-Database存储机制"><a href="#三、Web-SQL-Database存储机制" class="headerlink" title="三、Web SQL Database存储机制"></a>三、Web SQL Database存储机制</h4><ul>
-<li>H5 也提供基于 SQL 的数据库存储机制，用于存储适合数据库的结构化数据。根据官方的标准文档，Web SQL Database 存储机制不再推荐使用，将来也不再维护，而是推荐使用 AppCache 和 IndexedDB。</li>
-<li>现在主流的浏览器（点击查看浏览器支持情况）都还是支持 Web SQL Database 存储机制的。Web SQL Database 存储机制提供了一组 API 供 Web App 创建、存储、查询数据库。</li>
-</ul>
-<h4 id="四、Application-Cache（AppCache）机制"><a href="#四、Application-Cache（AppCache）机制" class="headerlink" title="四、Application Cache（AppCache）机制"></a>四、Application Cache（AppCache）机制</h4><h4 id="五、File-System-API"><a href="#五、File-System-API" class="headerlink" title="五、File System API"></a>五、File System API</h4>
+
       
     </div>
     
@@ -399,8 +374,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/29/框架学习之webpack/" rel="next" title="框架学习之webpack">
-                <i class="fa fa-chevron-left"></i> 框架学习之webpack
+              <a href="/2017/12/27/js深浅拷贝/" rel="next" title="js深浅拷贝">
+                <i class="fa fa-chevron-left"></i> js深浅拷贝
               </a>
             
           </div>
@@ -409,8 +384,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/25/mybog/" rel="prev" title="react基础整理">
-                react基础整理 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/24/h5缓存/" rel="prev" title="H5缓存机制">
+                H5缓存机制 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -527,7 +502,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#目前H5一共有6种缓存机制"><span class="nav-number">1.</span> <span class="nav-text">目前H5一共有6种缓存机制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#二、Dom-Storgage-Web-Storage-存储缓存，缓存分为localStorage、sessionStorage、cookie等"><span class="nav-number">1.1.</span> <span class="nav-text">二、Dom Storgage(Web Storage)存储缓存，缓存分为localStorage、sessionStorage、cookie等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、Web-SQL-Database存储机制"><span class="nav-number">1.2.</span> <span class="nav-text">三、Web SQL Database存储机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、Application-Cache（AppCache）机制"><span class="nav-number">1.3.</span> <span class="nav-text">四、Application Cache（AppCache）机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五、File-System-API"><span class="nav-number">1.4.</span> <span class="nav-text">五、File System API</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、概念"><span class="nav-number">1.</span> <span class="nav-text">一、概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、webpack-dev-server"><span class="nav-number">2.</span> <span class="nav-text">二、webpack-dev-server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、入口文件-entry"><span class="nav-number">3.</span> <span class="nav-text">三、入口文件 entry</span></a></li></ol></div>
             
 
           </div>
