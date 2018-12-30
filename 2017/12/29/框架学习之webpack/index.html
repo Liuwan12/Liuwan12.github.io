@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="一、概念 webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析 模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.js">
+<meta name="description" content="一、概念 webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析  模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.j">
 <meta property="og:type" content="article">
 <meta property="og:title" content="框架学习之webpack">
 <meta property="og:url" content="http://yoursite.com/2017/12/29/框架学习之webpack/index.html">
 <meta property="og:site_name" content="前端小白的进阶之路">
-<meta property="og:description" content="一、概念 webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析 模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.js">
+<meta property="og:description" content="一、概念 webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析  模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.j">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-29T08:43:05.465Z">
+<meta property="og:updated_time" content="2018-12-29T08:48:30.386Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="框架学习之webpack">
-<meta name="twitter:description" content="一、概念 webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析 模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.js">
+<meta name="twitter:description" content="一、概念 webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析  模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.j">
 
 
 
@@ -330,25 +330,29 @@
 
       
         <h3 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h3><ul>
-<li>webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析<ul>
+<li><p>webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析</p>
+<ul>
 <li>模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.js 更贴近 CommonJS Modules/1.1 和 Node Modules 规范。</li>
 <li>不仅实现了js文件的异步加载，还管理了模块之间的倚赖性</li>
 <li>对于依赖的模块，AMD 是提前执行，CMD 是延迟执行。不过 RequireJS 从 2.0 开始，也改成可以延迟执行（根据写法不同，处理方式不同）。CMD 推崇 as lazy as possible.</li>
 <li>CMD 推崇依赖就近，AMD 推崇依赖前置。</li>
 </ul>
 </li>
-<li>安装npm install webpack webpack-dev-server –save-dev</li>
+<li><p>安装npm install webpack webpack-dev-server –save-dev</p>
+</li>
 <li>bundle是由webpack打包出来的文件，chunk是在webpack进行模块的依赖分析时，分割出来的代码块。module是开发中的单个模块</li>
 <li>Loader是用来告诉webpack如何转化处理某一类型的文件，并且引入到打包出的文件中。plugin是用来自定义webpack打包过程的方式</li>
 <li>loaders负责的是处理源文件的如css、jsx，一次处理一个文件。而plugins并不是直接操作单个文件，它直接对整个构建过程起作用<br>loader的作用</li>
 </ul>
 <ol>
 <li>实现对不同格式的文件的处理，比如说将scss转换为css，或者typescript转化为js</li>
-<li>转换这些文件，从而使其能够被添加到依赖图中<h3 id="二、webpack-dev-server"><a href="#二、webpack-dev-server" class="headerlink" title="二、webpack-dev-server"></a>二、webpack-dev-server</h3></li>
+<li>转换这些文件，从而使其能够被添加到依赖图中</li>
+<li>babel-loader： 让下一代的js文件转换成现代浏览器能够支持的JS文件。<br>babel有些复杂，所以大多数都会新建一个.babelrc进行配置<br>css-loader,style-loader:两个建议配合使用，用来解析css文件，能够解释@import,url()如果需要解析less就在后面加一个less-loader<br>file-loader: 生成的文件名就是文件内容的MD5哈希值并会保留所引用资源的原始扩展名<br>url-loader: 功能类似 file-loader,但是文件大小低于指定的限制时，可以返回一个DataURL事实上<h3 id="二、webpack-dev-server"><a href="#二、webpack-dev-server" class="headerlink" title="二、webpack-dev-server"></a>二、webpack-dev-server</h3></li>
 </ol>
 <ul>
 <li>webpack-dev-server使用内存来存储webpack开发环境下的打包文件，并且可以使用模块热更新，他比传统的http服务对开发更加简单高效<br><strong> 模块热更新 </strong></li>
 <li>模块热更新是webpack的一个功能，它可以使得代码修改过后不用刷新浏览器就可以更新，是高级版的自动刷新浏览器<h3 id="三、入口文件-entry"><a href="#三、入口文件-entry" class="headerlink" title="三、入口文件 entry"></a>三、入口文件 entry</h3></li>
+<li>output: 即使入口文件有多个，但是只有一个输出配置</li>
 </ul>
 
       
@@ -384,8 +388,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/24/h5缓存/" rel="prev" title="H5缓存机制">
-                H5缓存机制 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/29/es6入门学习/" rel="prev" title="es6入门学习">
+                es6入门学习 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -465,7 +469,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
