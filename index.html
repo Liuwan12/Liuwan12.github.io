@@ -531,12 +531,7 @@
 </li>
 <li>bundle是由webpack打包出来的文件，chunk是在webpack进行模块的依赖分析时，分割出来的代码块。module是开发中的单个模块</li>
 <li>Loader是用来告诉webpack如何转化处理某一类型的文件，并且引入到打包出的文件中。plugin是用来自定义webpack打包过程的方式</li>
-<li>loaders负责的是处理源文件的如css、jsx，一次处理一个文件。而plugins并不是直接操作单个文件，它直接对整个构建过程起作用<br>loader的作用</li>
-</ul>
-<ol>
-<li>实现对不同格式的文件的处理，比如说将scss转换为css，或者typescript转化为js</li>
-<li>转换这些文件，从而使其能够被添加到依赖图中</li>
-<li>babel-loader： 让下一代的js文件转换成现代浏览器能够支持的JS文件。<br>babel有些复杂，所以大多数都会新建一个.babelrc进行配置<br>css-loader,style-loader:两个建议配合使用，用来解析css文件，能够解释@import,url()如果需要解析less就在后面加一个less-loader<br>file-loader: 生成的文件名就是文件内容的MD5哈希值并会保留所引用资源的原始扩展名<br>url-loader: 功能类似 file-loader,但是文件大小低于指定的限制时，可以返回一个DataURL事实上</li></ol>
+<li>loaders负责的是处理源文件的如css、jsx，一次处理一个文件。而plugins并不是直接操作单个文件，它直接对整个构建过程起作用</li></ul>
         
           <a class="article-more-a" href="/2017/12/29/框架学习之webpack/#more">more >></a>
         
@@ -690,18 +685,7 @@
 <li>本地新建分支： git branch 分支名</li>
 <li>git branch 查看本地所有分支</li>
 <li>git branch -a 查看本地和远程所有分支</li>
-<li>git checkout 分支名    切换分支</li>
-</ul>
-<h3 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h3><ul>
-<li>git pull/git init . // 初始化本地项目，在本地添加.git文件</li>
-<li>git add .</li>
-<li>git commit -m “说明 “    </li>
-<li>git push </li>
-<li>git关联远程仓库  ：     git remote add origin 远程仓库名</li>
-<li>git diff 查看修改内容</li>
-<li>git remote rm 仓库名  删除仓库</li>
-<li>git pull更新</li>
-</ul>
+<li>git checkout 分支名    切换分支</li></ul>
         
           <a class="article-more-a" href="/2017/12/24/git常用命令/#more">more >></a>
         
@@ -766,7 +750,69 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="1-js数据类型"><a href="#1-js数据类型" class="headerlink" title="1.js数据类型"></a>1.js数据类型</h3><ul>
+<li>共七种：5种基本数据类型null，undefined，boolean，string，number+一种复杂数据类型+es6的symbol</li>
+</ul>
+<h3 id="2-检测当前数据类型的方法，也就是typeof关键字"><a href="#2-检测当前数据类型的方法，也就是typeof关键字" class="headerlink" title="2.检测当前数据类型的方法，也就是typeof关键字"></a>2.检测当前数据类型的方法，也就是typeof关键字</h3><ul>
+<li>typeof 123 //number</li>
+<li>typeof ‘abc’  // string</li>
+<li>typeof true  //boolean</li>
+<li>typeof undefined // undefined</li>
+<li>typeof {} // object</li>
+<li>typeof [ ] // object</li>
+<li>typeof console.log() //function</li>
+<li><code>typeof null // object</code></li>
+</ul>
+<h3 id="3-异步操作的方法"><a href="#3-异步操作的方法" class="headerlink" title="3.异步操作的方法"></a>3.异步操作的方法</h3><ul>
+<li>1.回调函数  eg:setTimeout</li>
+<li>2.事件发布订阅</li>
+<li>3.promise    将函数调用改为了链式调用</li>
+<li>4.generator 消灭了promise的特征方法,需要自己维护yield的执行</li>
+<li>5.async/await  优雅的异步操作方法</li>
+</ul>
+<h3 id="4-js三种作用域类型（全局，函数，块级）"><a href="#4-js三种作用域类型（全局，函数，块级）" class="headerlink" title="4.js三种作用域类型（全局，函数，块级）"></a>4.js三种作用域类型（全局，函数，块级）</h3><ol>
+<li>全局变量： 声明在函数外部的变量，任何地方都可以访问到该变量</li>
+<li>局部变量： 声明在函数体内，只有函数体内可以访问到该变量<label style="color: green"><em>使用var</em></label></li>
+<li>函数内部声明变量的时候，一定要用var命令，否则，你声明的是全局变量</li>
+<li>在函数外面使用var声明变量后，在函数内部改变该变量的值后，函数外面的该变量的值也随之改变</li>
+<li>在函数外面使用var声明一个变量后，在函数内部使用var再次声明一次并改变其值，函数外面该变量的值不会发生改变</li>
+</ol>
+<hr>
+<p><label style="color: green"><em>使用const</em></label><br>用于修饰常量，定义的变量不可修改，而且必须初始化，声明位置不限</p>
+<hr>
+<p><label style="color: green"><em>使用let</em></label><br>let 声明的变量在{}中使用，变量的作用域限制在块级域中</p>
+<h2 id="5-js改变作用域的三种方式"><a href="#5-js改变作用域的三种方式" class="headerlink" title="5.js改变作用域的三种方式"></a>5.js改变作用域的三种方式</h2><ul>
+<li>1.使用apply()方法</li>
+<li>2.使用call()方法</li>
+<li>3.使用new关键字</li>
+</ul>
+<h3 id="6-js中的继承"><a href="#6-js中的继承" class="headerlink" title="6.js中的继承"></a>6.js中的继承</h3><p><strong>es5</strong></p>
+<ol>
+<li><p>原型链继承</p>
+<figure class="highlight plain"><figcaption><span>super() &#123; this.name </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">super.prototype.sayname = function()&#123;</span><br><span class="line"> alert(this.name);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>借用构造函数继承</p>
+</li>
+<li>组合式继承</li>
+<li>寄生组合式继承<br><strong>es6</strong><figure class="highlight plain"><figcaption><span>B extends A &#123;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  constructor(x,y,color)&#123;</span><br><span class="line">      super(x,y);</span><br><span class="line">     this.color = color;    </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>通过constructor来定义构造函数，用super调用父类的属性方法</li>
+<li>ES6中Class充当了ES5中，构造函数在继承实现过程中的作用</li>
+</ul>
+<p>###7.this作用域</p>
+<ul>
+<li>每个函数的this是在调用的时候被绑定的，完全取决于调用函数的调用位置而不是声明位置<ol>
+<li>默认情况下（非严格模式），没有找到直接调用者，this指向window</li>
+<li>严格模式（’use strict’），没有找到直接调用者，this是undefined</li>
+<li>this总是代表它的直接调用者，比如：obj.fun，那么fun中的this是obj</li>
+<li>使用call，apply，bind绑定的this指向的是绑定的对象<br><strong>箭头函数中的this指向定义时的this，而不是执行时的this</strong></li>
+</ol>
+</li>
+</ul>
+<p><a href="https://blog.csdn.net/qq_33207292/article/details/78625771" target="_blank" rel="noopener">https://blog.csdn.net/qq_33207292/article/details/78625771</a>  <em>可参考此文</em></p>
+
       
 
       
