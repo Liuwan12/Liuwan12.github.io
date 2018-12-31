@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="前端小白的进阶之路">
 <meta property="og:description" content="一、flex弹性布局盒模型 2009年w3c提出，给予容器控制内部元素高度和宽度的能力 已支持chrome、opera、firefox、safari、ie等，其中在webkit内核的浏览器中使用时，必须加上-webkit-前缀  ###二、容器属性介绍  flex-direction:决定主轴的方向，即项目排列的方向，有四个可能的值：row(默认)|row-reverse|column|colum">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-31T12:24:33.885Z">
+<meta property="og:updated_time" content="2018-12-31T12:55:25.286Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flex">
 <meta name="twitter:description" content="一、flex弹性布局盒模型 2009年w3c提出，给予容器控制内部元素高度和宽度的能力 已支持chrome、opera、firefox、safari、ie等，其中在webkit内核的浏览器中使用时，必须加上-webkit-前缀  ###二、容器属性介绍  flex-direction:决定主轴的方向，即项目排列的方向，有四个可能的值：row(默认)|row-reverse|column|colum">
@@ -190,17 +190,17 @@
 </ol>
 <ul>
 <li>flex-wrap (换行): nowrap(不换行默认), wrap, wrap-reverse(换行且往上一行换)</li>
-<li>flex-flow (以上两者的简写): flex-direction || flex-wrap</li>
+<li>flex-flow (以上两者的简写): flex-direction || flex-wrap<a id="more"></a></li>
 <li>justify-content (水平对齐方式): flex-start(左对齐), flex-end(右对齐), center(居中), space-between(左右两侧没有间距，中间间距相同), space-around(左右两侧的间距为中间间距的一半)</li>
 <li>align-items (垂直对齐方式):stretch(拉伸), flex-start(上对齐), flex-end(下对齐), center(中心对齐), baseline(基线对齐)</li>
 <li>align-content (多行垂直对齐方式): stretch, flex-start, flex-end, center, space-between, space-around</li>
 </ul>
 <h3 id="三、flex-item相关属性有order，flex-grow，flex-shrink，lex-basis，align-self"><a href="#三、flex-item相关属性有order，flex-grow，flex-shrink，lex-basis，align-self" class="headerlink" title="三、flex-item相关属性有order，flex-grow，flex-shrink，lex-basis，align-self"></a>三、flex-item相关属性有order，flex-grow，flex-shrink，lex-basis，align-self</h3><ul>
 <li>order(排列顺序)</li>
-<li>flex-grow（放大比例，剩余空间怎么分配</li>
-<li>flex-shrink （缩小比例，超出空间怎么压缩）</li>
-<li>flex-basis  (item所占主轴空间，优先级高于width)</li>
-<li>align-self  (对齐方式，覆盖align-items)</li>
+<li>flex-grow（放大比例，剩余空间怎么分配）定义了当flex容器有多余空间时，item是否放大。默认值为0，即当有多余空间时也不放大；可能的值为整数，表示不同item的放大比例</li>
+<li>flex-shrink （缩小比例，超出空间怎么压缩）定义了当容器空间不足时，item是否缩小。默认值为1，表示当空间不足时，item自动缩小，其可能的值为整数，表示不同item的缩小比例。</li>
+<li>flex-basis  (item所占主轴空间，优先级高于width)：表示项目在主轴上占据的空间，默认值为auto</li>
+<li>align-self  (对齐方式，覆盖align-items)：align-self属性允许item有自己独特的在交叉轴上的对齐方式</li>
 </ul>
 
       
