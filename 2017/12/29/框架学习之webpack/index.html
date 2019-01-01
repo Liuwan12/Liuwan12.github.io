@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="前端小白的进阶之路">
 <meta property="og:description" content="一、概念 webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析  模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.j">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-31T13:04:04.311Z">
+<meta property="og:updated_time" content="2019-01-01T09:16:55.681Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="框架学习之webpack">
 <meta name="twitter:description" content="一、概念 webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析  模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.j">
@@ -185,11 +185,11 @@
 </li>
 <li><p>安装npm install webpack webpack-dev-server –save-dev</p>
 </li>
-<li>bundle是由webpack打包出来的文件，chunk是在webpack进行模块的依赖分析时，分割出来的代码块。module是开发中的单个模块</li>
+<li>bundle是由webpack打包出来的文件，chunk是在webpack进行模块的依赖分析时，分割出来的代码块。module是开发中的单个模块<a id="more"></a></li>
 <li>Loader是用来告诉webpack如何转化处理某一类型的文件，并且引入到打包出的文件中。plugin是用来自定义webpack打包过程的方式</li>
-<li>loaders负责的是处理源文件的如css、jsx，一次处理一个文件。而plugins并不是直接操作单个文件，它直接对整个构建过程起作用<a id="more"></a>
-loader的作用</li>
+<li>loaders负责的是处理源文件的如css、jsx，一次处理一个文件。而plugins并不是直接操作单个文件，它直接对整个构建过程起作用</li>
 </ul>
+<p>loader的作用</p>
 <ol>
 <li>实现对不同格式的文件的处理，比如说将scss转换为css，或者typescript转化为js</li>
 <li>转换这些文件，从而使其能够被添加到依赖图中</li>

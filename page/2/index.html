@@ -155,6 +155,153 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-js深浅拷贝" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/27/js深浅拷贝/">js深浅拷贝</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/27/js深浅拷贝/" class="archive-article-date">
+  	<time datetime="2017-12-27T10:28:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、js数据类型"><a href="#一、js数据类型" class="headerlink" title="一、js数据类型"></a>一、js数据类型</h3><ul>
+<li>javaScritp的数据类型有：数值类型、字符串类型、布尔类型、null、undefined、对象(数组、正则表达式、日期、函数)，大致分成两种：基本数据类型和引用数据类型</li>
+<li>基本数据类型保存在栈内存，引用类型保存在堆内存中。根本原因在于保存在栈内存的必须是大小固定的数据，引用类型的大小不固定，只能保存在堆内存中，但是可以把它的地址写在栈内存中以供我们访问</li>
+</ul>
+<h3 id="二、浅拷贝"><a href="#二、浅拷贝" class="headerlink" title="二、浅拷贝"></a>二、浅拷贝</h3><ul>
+<li>只是拷贝基本的数据类型，浅拷贝只复制指向某个对象的指针，而不复制对象本身，新旧对象还是共享同一块内存<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function simpleClone(initalObj) &#123;    </span><br><span class="line">          var obj = &#123;&#125;;    </span><br><span class="line">          for ( var i in initalObj) &#123;</span><br><span class="line">            obj[i] = initalObj[i];</span><br><span class="line">          &#125;    </span><br><span class="line">          return obj;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2017/12/27/js深浅拷贝/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/27/js深浅拷贝/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-git常用命令" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/24/git常用命令/">git常用命令</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/24/git常用命令/" class="archive-article-date">
+  	<time datetime="2017-12-24T14:52:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="配置名字和邮箱"><a href="#配置名字和邮箱" class="headerlink" title="配置名字和邮箱"></a>配置名字和邮箱</h3><ul>
+<li>git config –global user.name “用户名”</li>
+<li>git config –global user.email “邮箱”</li>
+<li>git init 初始化仓库</li>
+</ul>
+<h3 id="git-status-查看仓库状态"><a href="#git-status-查看仓库状态" class="headerlink" title="git status 查看仓库状态"></a>git status 查看仓库状态</h3><ul>
+<li>克隆代码    git clone 路径 </li>
+<li>本地新建分支： git branch 分支名</li>
+<li>git branch 查看本地所有分支</li>
+<li>git branch -a 查看本地和远程所有分支</li>
+<li>git checkout 分支名    切换分支</li></ul>
+        
+          <a class="article-more-a" href="/2017/12/24/git常用命令/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/24/git常用命令/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-JS基础学习1" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
