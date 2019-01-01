@@ -240,6 +240,176 @@
 
 
   
+    <article id="post-vue知识点整理" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/28/vue知识点整理/">vue知识点整理</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/28/vue知识点整理/" class="archive-article-date">
+  	<time datetime="2018-09-28T07:55:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、MVVM设计模式的理解"><a href="#一、MVVM设计模式的理解" class="headerlink" title="一、MVVM设计模式的理解"></a>一、MVVM设计模式的理解</h3><ul>
+<li>MVVM是Model-View-ViewModel 的缩写，Model代表数据模型，View代表UI组件，ViewModel 监听模型数据的改变和控制视图行为、处理用户交互</li>
+<li>在MVVM架构下，View 和 Model 之间并没有直接的联系，而是通过ViewModel进行交互，Model 和 ViewModel 之间的交互是双向的， 因此View 数据的变化会同步到Model中，而Model 数据的变化也会立即反应到View上。</li>
+<li>ViewModel 通过双向数据绑定把 View 层和 Model 层连接了起来，而View 和 Model 之间的同步工作完全是自动的，无需人为干涉，因此开发者只需关注业务逻辑，不需要手动操作DOM, 不需要关注数据状态的同步问题，复杂的数据状态维护完全由 MVVM 来统一管理</li>
+</ul>
+<h3 id="二、Vue生命周期"><a href="#二、Vue生命周期" class="headerlink" title="二、Vue生命周期"></a>二、Vue生命周期</h3><ol>
+<li>beforeCreate（创建前） 在数据观测和初始化事件还未开始</li>
+<li>created（创建后） 完成数据观测，属性和方法的运算，初始化事件，$el属性还没有显示出来</li>
+<li>beforeMount（载入前） 在挂载开始之前被调用，相关的render函数首次被调用。实例已完成以下的配置：编译模板，把data里面的数据和模板生成html。注意此时还没有挂载html到页面上。</li>
+<li>mounted（载入后） 在el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用。实例已完成以下的配置：用上面编译好的html内容替换el属性指向的DOM对象。完成模板中的html渲染到html页面中。此过程中进行ajax交互。</li>
+<li>beforeUpdate（更新前） 在数据更新之前调用，发生在虚拟DOM重新渲染和打补丁之前。可以在该钩子中进一步地更改状态，不会触发附加的重渲染过程。</li>
+<li>updated（更新后） 在由于数据更改导致的虚拟DOM重新渲染和打补丁之后调用。调用时，组件DOM已经更新，所以可以执行依赖于DOM的操作。然而在大多数情况下，应该避免在此期间更改状态，因为这可能会导致更新无限循环。该钩子在服务器端渲染期间不被调用。</li>
+<li>beforeDestroy（销毁前） 在实例销毁之前调用。实例仍然完全可用。</li>
+<li>destroyed（销毁后） 在实例销毁之后调用。调用后，所有的事件监听器会被移除，所有的子实例也会被销毁。该钩子在服务器端渲染期间不被调用。</li>
+</ol>
+<h3 id="三、vue双向绑定的原理"><a href="#三、vue双向绑定的原理" class="headerlink" title="三、vue双向绑定的原理"></a>三、vue双向绑定的原理</h3>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/28/vue知识点整理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-es6入门学习" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/05/es6入门学习/">es6入门学习</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/05/es6入门学习/" class="archive-article-date">
+  	<time datetime="2018-03-05T08:49:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、ECMASCRIPT概念"><a href="#一、ECMASCRIPT概念" class="headerlink" title="一、ECMASCRIPT概念"></a>一、ECMASCRIPT概念</h3><ul>
+<li>ecmascript是js的规格，js是es6的一种实现</li>
+<li>Babel是一个广泛的ES6转码器，可以讲es6代码转为es5，从而在现有环境下执行：命令行转码npm install –global babel-cli</li>
+</ul>
+<h3 id="二、-let和const"><a href="#二、-let和const" class="headerlink" title="二、 let和const"></a>二、 let和const</h3><ul>
+<li>es6新增了let命令，用于声明变量。类似于var，但是它所声明的变量只在当前代码块内有效，</li>
+<li><p>js作用域</p>
+<ol>
+<li>全局作用域，在任何地方都能访问到<ul>
+<li>声明在最外层函数外部和最外层函数拥有全局作用域</li>
+<li>所有未直接赋值的变量自动声明为全局作用域</li>
+<li>所有window对象的属性拥有全局作用域</li>
+</ul>
+</li>
+<li>局部作用域：声明在函数内部的变量，和全局作用域相反，局部作用域一般只在固定的代码片段内可访问到，最常见的例如函数内部，函数外部不能访问</li>
+<li><p>es6中的作用域，即let定义的变量，拥有块级作用域</p>
+<ul>
+<li>es5没有块级作用域，var变量提升会导致内层变量覆盖外层变量</li>
+<li>用来计数的循环变量泄漏为全局变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for (var i = 0; i &lt; 10; i++) &#123;    </span><br><span class="line">        console.log(i);    </span><br><span class="line">&#125;    </span><br><span class="line">console.log(i);  // 10</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>var声明的变量可以在声明之前使用值为undefined，称为变量提升。let没有变量提升的概念，只是暂时性死区：即规定变量不能在声明之前使用，否则会报错</p>
+</li>
+<li>不允许在相同作用域内，重复声明同一个变量，不能在函数内部重新声明参数</li>
+<li>浏览器的实现上允许在块级作用域内声明函数</li>
+</ol>
+</li>
+<li>const声明一个只读的常量，一旦声明，值就不能改变，一旦声明就必须立即初始化，不能留到以后赋值，和let一样只在声明所在的块级作用域内有效</li></ul>
+        
+          <a class="article-more-a" href="/2018/03/05/es6入门学习/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/05/es6入门学习/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-h5缓存" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -399,6 +569,76 @@
 
 
   
+    <article id="post-js排序初识" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/04/js排序初识/">js排序初识</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/04/js排序初识/" class="archive-article-date">
+  	<time datetime="2018-01-04T05:48:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、经典算法之冒泡排序"><a href="#一、经典算法之冒泡排序" class="headerlink" title="一、经典算法之冒泡排序"></a>一、经典算法之冒泡排序</h3><ul>
+<li><p>比较相邻的前后二个数据，如果前面数据大于后面的数据，就将二个 数据交换。 这样对数组的第0个数据到N-1个数据进行一次遍历后，最大的一个数据就“沉”到数组第N-1个位置。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">     function bubbleSort(arr)&#123;</span><br><span class="line">     for(var i=0;i&lt;arr.length-1;i++)&#123;</span><br><span class="line">         for(var j=0;j&lt;arr.length-i-1;j++)&#123;</span><br><span class="line">             if(arr[j]&gt;arr[j+1])&#123;</span><br><span class="line">                 var temp=arr[j];</span><br><span class="line">                 arr[j]=arr[j+1];</span><br><span class="line">                 arr[j+1]=temp;</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     return arr;</span><br><span class="line"> &#125;</span><br><span class="line">console.log(bubbleSort([6,1,2,4,3,5]))</span><br></pre></td></tr></table></figure>
+<h3 id="二、sort排序"><a href="#二、sort排序" class="headerlink" title="二、sort排序"></a>二、sort排序</h3></li>
+<li>sort方法用于对数组的排序，并返回数组，默认升序排列</li>
+<li>无参数：A.字符串：直接arr.sort();<br><img src="/2018/01/04/js排序初识/sort1.png" alt="sort1"></li></ul>
+        
+          <a class="article-more-a" href="/2018/01/04/js排序初识/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/04/js排序初识/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-flex" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -450,99 +690,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/03/flex/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-es6入门学习" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/29/es6入门学习/">es6入门学习</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/29/es6入门学习/" class="archive-article-date">
-  	<time datetime="2017-12-29T08:49:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、ECMASCRIPT概念"><a href="#一、ECMASCRIPT概念" class="headerlink" title="一、ECMASCRIPT概念"></a>一、ECMASCRIPT概念</h3><ul>
-<li>ecmascript是js的规格，js是es6的一种实现</li>
-<li>Babel是一个广泛的ES6转码器，可以讲es6代码转为es5，从而在现有环境下执行：命令行转码npm install –global babel-cli</li>
-</ul>
-<h3 id="二、-let和const"><a href="#二、-let和const" class="headerlink" title="二、 let和const"></a>二、 let和const</h3><ul>
-<li>es6新增了let命令，用于声明变量。类似于var，但是它所声明的变量只在当前代码块内有效，</li>
-<li><p>js作用域</p>
-<ol>
-<li>全局作用域，在任何地方都能访问到<ul>
-<li>声明在最外层函数外部和最外层函数拥有全局作用域</li>
-<li>所有未直接赋值的变量自动声明为全局作用域</li>
-<li>所有window对象的属性拥有全局作用域</li>
-</ul>
-</li>
-<li>局部作用域：声明在函数内部的变量，和全局作用域相反，局部作用域一般只在固定的代码片段内可访问到，最常见的例如函数内部，函数外部不能访问</li>
-<li><p>es6中的作用域，即let定义的变量，拥有块级作用域</p>
-<ul>
-<li>es5没有块级作用域，var变量提升会导致内层变量覆盖外层变量</li>
-<li>用来计数的循环变量泄漏为全局变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for (var i = 0; i &lt; 10; i++) &#123;    </span><br><span class="line">        console.log(i);    </span><br><span class="line">&#125;    </span><br><span class="line">console.log(i);  // 10</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>var声明的变量可以在声明之前使用值为undefined，称为变量提升。let没有变量提升的概念，只是暂时性死区：即规定变量不能在声明之前使用，否则会报错</p>
-</li>
-<li>不允许在相同作用域内，重复声明同一个变量，不能在函数内部重新声明参数</li>
-<li>浏览器的实现上允许在块级作用域内声明函数</li>
-</ol>
-</li>
-<li>const声明一个只读的常量，一旦声明，值就不能改变，一旦声明就必须立即初始化，不能留到以后赋值，和let一样只在声明所在的块级作用域内有效</li></ul>
-        
-          <a class="article-more-a" href="/2017/12/29/es6入门学习/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/29/es6入门学习/">展开全文 >></a>
         </p>
       
 
@@ -804,152 +951,10 @@
 
 
   
-    <article id="post-JS基础学习1" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/20/JS基础学习1/">JS基础学习1</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/20/JS基础学习1/" class="archive-article-date">
-  	<time datetime="2017-12-20T04:04:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-js数据类型"><a href="#1-js数据类型" class="headerlink" title="1.js数据类型"></a>1.js数据类型</h3><ul>
-<li>共七种：5种基本数据类型null，undefined，boolean，string，number+一种复杂数据类型+es6的symbol</li>
-</ul>
-<h3 id="2-检测当前数据类型的方法，也就是typeof关键字"><a href="#2-检测当前数据类型的方法，也就是typeof关键字" class="headerlink" title="2.检测当前数据类型的方法，也就是typeof关键字"></a>2.检测当前数据类型的方法，也就是typeof关键字</h3><ul>
-<li>typeof 123 //number</li>
-<li>typeof ‘abc’  // string</li>
-<li>typeof true  //boolean</li>
-<li>typeof undefined // undefined</li>
-<li>typeof {} // object</li>
-<li>typeof [ ] // object</li>
-<li>typeof console.log() //function</li>
-<li><code>typeof null // object</code></li>
-</ul>
-<h3 id="3-异步操作的方法"><a href="#3-异步操作的方法" class="headerlink" title="3.异步操作的方法"></a>3.异步操作的方法</h3><ul>
-<li>1.回调函数  eg:setTimeout</li>
-<li>2.事件发布订阅</li>
-<li>3.promise    将函数调用改为了链式调用</li>
-<li>4.generator 消灭了promise的特征方法,需要自己维护yield的执行</li>
-<li>5.async/await  优雅的异步操作方法</li></ul>
-        
-          <a class="article-more-a" href="/2017/12/20/JS基础学习1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/20/JS基础学习1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/20/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/20/hello-world/" class="archive-article-date">
-  	<time datetime="2017-11-20T02:34:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/20/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
