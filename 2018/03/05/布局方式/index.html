@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="前端小白的进阶之路">
 <meta property="og:description" content="一、流式布局(百分比布局) 把元素的宽,高,margin,padding不再用固定数值,改用百分比,这样元素的高,margin,padding 会根据页面的尺寸随时调整，已达到适应当前页面的目的. 百分比是基于元素父级的大小计算得来的； 元素的水平或者竖直间距都是相对于父级的宽度计算的.(margin&amp;amp;padding) 元素的宽高用百分比做单位，元素宽高按屏幕分辨率调整，布局不发生变化 左">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-02T06:01:09.974Z">
+<meta property="og:updated_time" content="2019-01-02T14:48:15.361Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="布局方式">
 <meta name="twitter:description" content="一、流式布局(百分比布局) 把元素的宽,高,margin,padding不再用固定数值,改用百分比,这样元素的高,margin,padding 会根据页面的尺寸随时调整，已达到适应当前页面的目的. 百分比是基于元素父级的大小计算得来的； 元素的水平或者竖直间距都是相对于父级的宽度计算的.(margin&amp;amp;padding) 元素的宽高用百分比做单位，元素宽高按屏幕分辨率调整，布局不发生变化 左">
@@ -195,6 +195,23 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">(function () &#123;</span><br><span class="line">    var html = document.documentElement;</span><br><span class="line"></span><br><span class="line">    function onWindowResize() &#123;</span><br><span class="line">        html.style.fontSize = html.getBoundingClientRect().width / 20 + &apos;px&apos;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    window.addEventListener(&apos;resize&apos;, onWindowResize);</span><br><span class="line">    onWindowResize();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>对于视觉稿上的元素尺寸换算，只需要元素的原始的px值(即你量的大小) 除以rem基准值即可。例如设计稿的大小为640px， rem基准值 = 640px/20 = 32px ，有个元素的大小你量出来是 140px286px* ，那么换算过来就是：<br>  140px = 140/32 = 4.375rem<br>  286px = 286/32 = 8.9375rem</p>
+</li>
+</ul>
+<h3 id="五、元素居中对齐方式"><a href="#五、元素居中对齐方式" class="headerlink" title="五、元素居中对齐方式"></a>五、元素居中对齐方式</h3><ul>
+<li><p>table-cell</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  display: table-cell;</span><br><span class="line">  vertical-align: middle;</span><br><span class="line">  text-align: center;        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>display:flex</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  display: flex;</span><br><span class="line">  justify-content:center;</span><br><span class="line">  align-items:Center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>绝对定位和负边距</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> span&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    width:100px;</span><br><span class="line">    height: 50px;</span><br><span class="line">    top:50%;</span><br><span class="line">    left:50%;</span><br><span class="line">    margin-left:-50px;</span><br><span class="line">    margin-top:-25px;</span><br><span class="line">    text-align: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>绝对定位和0</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> span&#123;</span><br><span class="line">    width: 50%; </span><br><span class="line">    height: 50%; </span><br><span class="line">    background: #000;</span><br><span class="line">    overflow: auto; </span><br><span class="line">    margin: auto; </span><br><span class="line">    position: absolute; </span><br><span class="line">    top: 0; left: 0; bottom: 0; right: 0; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>display:flex和margin:auto</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.box8&#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    text-align: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 
