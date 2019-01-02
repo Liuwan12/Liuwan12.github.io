@@ -155,6 +155,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-框架学习之webpack" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/29/框架学习之webpack/">框架学习之webpack</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/29/框架学习之webpack/" class="archive-article-date">
+  	<time datetime="2017-12-29T07:09:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h3><ul>
+<li><p>webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析</p>
+<ul>
+<li>模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.js 更贴近 CommonJS Modules/1.1 和 Node Modules 规范。</li>
+<li>不仅实现了js文件的异步加载，还管理了模块之间的倚赖性</li>
+<li>对于依赖的模块，AMD 是提前执行，CMD 是延迟执行。不过 RequireJS 从 2.0 开始，也改成可以延迟执行（根据写法不同，处理方式不同）。CMD 推崇 as lazy as possible.</li>
+<li>CMD 推崇依赖就近，AMD 推崇依赖前置。</li>
+</ul>
+</li>
+<li><p>安装npm install webpack webpack-dev-server –save-dev</p>
+</li>
+<li>bundle是由webpack打包出来的文件，chunk是在webpack进行模块的依赖分析时，分割出来的代码块。module是开发中的单个模块</li></ul>
+        
+          <a class="article-more-a" href="/2017/12/29/框架学习之webpack/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/29/框架学习之webpack/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-js深浅拷贝" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     

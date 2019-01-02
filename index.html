@@ -393,6 +393,80 @@
 
 
   
+    <article id="post-布局方式" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/05/布局方式/">布局方式</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/05/布局方式/" class="archive-article-date">
+  	<time datetime="2018-03-05T04:34:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、流式布局-百分比布局"><a href="#一、流式布局-百分比布局" class="headerlink" title="一、流式布局(百分比布局)"></a>一、流式布局(百分比布局)</h3><ul>
+<li>把元素的宽,高,margin,padding不再用固定数值,改用百分比,这样元素的高,margin,padding 会根据页面的尺寸随时调整，已达到适应当前页面的目的.</li>
+<li>百分比是基于元素父级的大小计算得来的；</li>
+<li>元素的水平或者竖直间距都是相对于父级的宽度计算的.(margin&amp;padding)</li>
+<li>元素的宽高用百分比做单位，元素宽高按屏幕分辨率调整，布局不发生变化</li>
+<li>左侧固定+右侧自适应；左右固定宽度+中间自适应</li>
+</ul>
+<h3 id="二、弹性布局（伸缩布局）"><a href="#二、弹性布局（伸缩布局）" class="headerlink" title="二、弹性布局（伸缩布局）"></a>二、弹性布局（伸缩布局）</h3><ul>
+<li>CSS3引入了一种新的布局模式——Flexbox布局，即伸缩布局盒模型（Flexible Box），用来提供一个更加有效的方式制定、调整和分布一个容器里项目布局，即使它们的大小是未知或者动态的，这里简称为Flex，参考<a href="https://liuwan12.github.io/2018/01/03/flex/#more" target="_blank" rel="noopener">https://liuwan12.github.io/2018/01/03/flex/#more</a></li>
+<li>Flexbox布局在定义伸缩项目大小时伸缩容器会预留一些可用空间，让你可以调节伸缩项目的相对大小和位置</li></ul>
+        
+          <a class="article-more-a" href="/2018/03/05/布局方式/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/05/布局方式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-跨域篇" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -562,9 +636,14 @@
 <li>IE盒子模型：宽度=内容宽度（content+border+padding）+ margin</li>
 <li>box-sizing属性<h3 id="二、元素垂直居中的解决方案"><a href="#二、元素垂直居中的解决方案" class="headerlink" title="二、元素垂直居中的解决方案"></a>二、元素垂直居中的解决方案</h3></li>
 </ul>
-<h3 id="三、CSS选择器，可继承属性"><a href="#三、CSS选择器，可继承属性" class="headerlink" title="三、CSS选择器，可继承属性"></a>三、CSS选择器，可继承属性</h3><h3 id="四、CSS3新增伪类"><a href="#四、CSS3新增伪类" class="headerlink" title="四、CSS3新增伪类"></a>四、CSS3新增伪类</h3><h3 id="五、常用属性值"><a href="#五、常用属性值" class="headerlink" title="五、常用属性值"></a>五、常用属性值</h3><ul>
-<li>display：inline（默认）–内联；none–隐藏；block–块显；table–表格显示；list-item–项目列表；inline-block</li>
-<li>position： static（默认）：按照正常文档流进行排列；relative（相对定位）：不脱离文档流，参考自身静态位置通过 top, bottom, left, right 定位；absolute(绝对定位)：参考距其最近一个不为static的父级元素通过top, bottom, left, right 定位；fixed(固定定位)：所固定的参照对像是可视窗口</li></ul>
+<h3 id="三、CSS3选择器，继承属性"><a href="#三、CSS3选择器，继承属性" class="headerlink" title="三、CSS3选择器，继承属性"></a>三、CSS3选择器，继承属性</h3><ul>
+<li>C3选择器<ol>
+<li>*通用选择器</li>
+<li>‘#’：ID选择器</li>
+<li>.class:类选择器</li>
+<li>标签选择器</li>
+<li>子元素选择器</li>
+<li>属性选择器</li></ol></li></ul>
         
           <a class="article-more-a" href="/2018/01/23/css篇/#more">more >></a>
         
@@ -804,82 +883,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/03/flex/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-框架学习之webpack" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/29/框架学习之webpack/">框架学习之webpack</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/29/框架学习之webpack/" class="archive-article-date">
-  	<time datetime="2017-12-29T07:09:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h3><ul>
-<li><p>webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析</p>
-<ul>
-<li>模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.js 更贴近 CommonJS Modules/1.1 和 Node Modules 规范。</li>
-<li>不仅实现了js文件的异步加载，还管理了模块之间的倚赖性</li>
-<li>对于依赖的模块，AMD 是提前执行，CMD 是延迟执行。不过 RequireJS 从 2.0 开始，也改成可以延迟执行（根据写法不同，处理方式不同）。CMD 推崇 as lazy as possible.</li>
-<li>CMD 推崇依赖就近，AMD 推崇依赖前置。</li>
-</ul>
-</li>
-<li><p>安装npm install webpack webpack-dev-server –save-dev</p>
-</li>
-<li>bundle是由webpack打包出来的文件，chunk是在webpack进行模块的依赖分析时，分割出来的代码块。module是开发中的单个模块</li></ul>
-        
-          <a class="article-more-a" href="/2017/12/29/框架学习之webpack/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/29/框架学习之webpack/">展开全文 >></a>
         </p>
       
 
