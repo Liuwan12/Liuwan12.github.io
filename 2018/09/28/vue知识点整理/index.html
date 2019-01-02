@@ -15,10 +15,13 @@
 <meta property="og:site_name" content="前端小白的进阶之路">
 <meta property="og:description" content="一、MVVM设计模式的理解 MVVM是Model-View-ViewModel 的缩写，Model代表数据模型，View代表UI组件，ViewModel 监听模型数据的改变和控制视图行为、处理用户交互 在MVVM架构下，View 和 Model 之间并没有直接的联系，而是通过ViewModel进行交互，Model 和 ViewModel 之间的交互是双向的， 因此View 数据的变化会同步到Mod">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-01T10:14:53.934Z">
+<meta property="og:image" content="http://yoursite.com/2018/09/28/vue知识点整理/vuestate.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/28/vue知识点整理/state2">
+<meta property="og:updated_time" content="2019-01-02T15:08:00.725Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue知识点整理">
 <meta name="twitter:description" content="一、MVVM设计模式的理解 MVVM是Model-View-ViewModel 的缩写，Model代表数据模型，View代表UI组件，ViewModel 监听模型数据的改变和控制视图行为、处理用户交互 在MVVM架构下，View 和 Model 之间并没有直接的联系，而是通过ViewModel进行交互，Model 和 ViewModel 之间的交互是双向的， 因此View 数据的变化会同步到Mod">
+<meta name="twitter:image" content="http://yoursite.com/2018/09/28/vue知识点整理/vuestate.png">
   
     <link rel="alternative" href="/atom.xml" title="前端小白的进阶之路" type="application/atom+xml">
   
@@ -205,6 +208,19 @@
 <h3 id="六、Vue与react的区别"><a href="#六、Vue与react的区别" class="headerlink" title="六、Vue与react的区别"></a>六、Vue与react的区别</h3><ul>
 <li>相同点： 一切都是组件，组件实例之间可以嵌套；都提供合理生命周期钩子，可以让开发者定制化地去处理需求</li>
 <li>不同点：react整体是函数式的思想，把组件设计成纯组件，状态和逻辑通过参数传入，所以在react中，是单向数据流，推崇结合immutable来实现数据不可变。而vue的思想是响应式的，也就是基于是数据可变的，通过对每一个属性建立Watcher来监听，当属性变化的时候，响应式的更新对应的虚拟dom</li>
+</ul>
+<h3 id="七、vuex相关"><a href="#七、vuex相关" class="headerlink" title="七、vuex相关"></a>七、vuex相关</h3><ul>
+<li>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化</li>
+<li>这个状态自管理应用包含以下几个部分：<ol>
+<li>state，驱动应用的数据源；</li>
+<li>view，以声明方式将 state 映射到视图；</li>
+<li>actions，响应在 view 上的用户输入导致的状态变化<br><img src="/2018/09/28/vue知识点整理/vuestate.png" alt="vuestate"></li>
+</ol>
+</li>
+<li>state: Vuex 使用单一状态树,即每个应用将仅仅包含一个store 实例，但单一状态树和模块化并不冲突。存放的数据状态，不可以直接修改里面的数据。</li>
+<li>mutations: mutations定义的方法动态修改Vuex 的 store 中的状态或数据。</li>
+<li>getters: 类似vue的计算属性，主要用来过滤一些数据。</li>
+<li>action: actions可以理解为通过将mutations里面处里数据的方法变成可异步的处理数据的方法，简单的说就是异步操作数据。view 层通过 store.dispath 来分发 action<br><img src="/2018/09/28/vue知识点整理/state2" alt="state2"></li>
 </ul>
 
       
