@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/01/05/http协议攻略/http报文.png">
 <meta property="og:image" content="http://yoursite.com/2018/01/05/http协议攻略/https.png">
-<meta property="og:updated_time" content="2019-01-01T09:17:26.302Z">
+<meta property="og:updated_time" content="2019-01-03T05:08:45.091Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http协议攻略">
 <meta name="twitter:description" content="一、http请求报文 一个HTTP请求报文由请求行（request line）、请求头部（header）、空行和请求数据4个部分组成  请求行,由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔:HTTP协议的请求方法有GET、POST、HEAD、PUT、DELETE、OPTIONS、TRACE、CONNECT.GET方法要求服务器将URL定位的资源放在响应报文的数据部分">
@@ -204,6 +204,7 @@
 <li>第一次握手：客户端发送syn包(syn=j)到服务器，并进入SYN_SEND状态，等待服务器确认；第二次握手：服务器收到syn包，必须确认客户的SYN（ack=j+1），同时自己也发送一个SYN包（syn=k），即SYN+ACK包，此时服务器进入SYN_RECV状态；第三次握手：客户端收到服务器的SYN＋ACK包，向服务器发送确认包ACK(ack=k+1)，此包发送完毕，客户端和服务器进入ESTABLISHED状态，完成三次握手。</li>
 </ol>
 </li>
+<li>在TCP/IP参考模型中，去掉了OSI参考模型中的会话层和表示层，分为四层协议：应用层，传输层，网络互联层，主机到网络</li>
 <li>http连接<ol>
 <li>HTTP是应用层协议，主要解决如何包装数据</li>
 <li>HTTP连接最显著的特点是客户端发送的每次请求都需要服务器回送响应，在请求结束后，会主动释放连接。从建立连接到关闭连接的过程称为“一次连接“。</li>
