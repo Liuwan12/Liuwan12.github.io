@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="前端小白的进阶之路">
 <meta property="og:description" content="一、流式布局(百分比布局) 把元素的宽,高,margin,padding不再用固定数值,改用百分比,这样元素的高,margin,padding 会根据页面的尺寸随时调整，已达到适应当前页面的目的. 百分比是基于元素父级的大小计算得来的； 元素的水平或者竖直间距都是相对于父级的宽度计算的.(margin&amp;amp;padding) 元素的宽高用百分比做单位，元素宽高按屏幕分辨率调整，布局不发生变化 左">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-02T14:48:15.361Z">
+<meta property="og:updated_time" content="2019-01-06T14:16:45.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="布局方式">
 <meta name="twitter:description" content="一、流式布局(百分比布局) 把元素的宽,高,margin,padding不再用固定数值,改用百分比,这样元素的高,margin,padding 会根据页面的尺寸随时调整，已达到适应当前页面的目的. 百分比是基于元素父级的大小计算得来的； 元素的水平或者竖直间距都是相对于父级的宽度计算的.(margin&amp;amp;padding) 元素的宽高用百分比做单位，元素宽高按屏幕分辨率调整，布局不发生变化 左">
@@ -214,6 +214,18 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.box8&#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    text-align: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<h3 id="六、移动端适配方案"><a href="#六、移动端适配方案" class="headerlink" title="六、移动端适配方案"></a>六、移动端适配方案</h3><p>目前的移动端适配方案技术有：</p>
+<ol>
+<li><p>通过媒体查询的方式即CSS3的meida queries：主要是通过查询设备的宽度来执行不同的 css 代码，最终达到界面的配置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> @media screen and (max-width: 600px) &#123; /*当屏幕尺寸小于600px时，应用下面的CSS样式*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>以天猫首页为代表的 flex 弹性布局</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">viewport是固定的：&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>以淘宝首页为代表的 rem+viewport缩放:根据屏幕宽度设定 rem 值，需要适配的元素都使用 rem 为单位，不需要适配的元素还是使用 px 为单位</p>
+</li>
+<li>rem 方式</li>
+</ol>
 
       
 
