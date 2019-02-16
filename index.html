@@ -572,16 +572,24 @@
 </ul>
 <ol>
 <li>通过jsonp跨域<ul>
-<li>原理：script标签请求的js代码会被执行，</li>
+<li>原理：我们提供一个 script 标签. 请求页面中的数据, 同时传入一个回调函数的名字. 服务器端得到名字后, 拼接函数执行格式的字符串. 发送回浏览器. script 在下载代码以后并执行, 执行的就是这个函数调用形式的字符串, 因此就将本地函数调用了.同时拿到了从服务器端得到的数据，</li>
 </ul>
 </li>
 <li>document.domain + iframe跨域</li>
 <li>location.hash + iframe</li>
 <li>window.name + iframe跨域</li>
 <li>postMessage跨域</li>
-<li>跨域资源共享（CORS）</li>
-<li>nginx代理跨域</li>
-<li>nodejs中间件代理跨域</li>
+<li>跨域资源共享（CORS）：CORS 是在 es5 之后提出的跨域方案. 只需要在服务器配置一个跨域响应头接口 与jsonp相比的优点：<ul>
+<li>1、 JSONP只能实现GET请求，而CORS支持所有类型的HTTP请求。 </li>
+<li>使用CORS，开发者可以使用普通的XMLHttpRequest发起请求和获得数据，比起JSONP有更好的错误处理。 </li>
+<li>JSONP主要被老的浏览器支持，它们往往不支持CORS，而绝大多数现代浏览器都已经支持了CORS</li>
+</ul>
+</li>
+<li>代理跨域<ul>
+<li>正向代理: 我借助与我的服务器, 像数据服务器发送数据, 我的服务器只需要向数据服务器发送get请求即可 </li>
+<li>反向代理: 与正向代理类似, 但是不借助于脚本, 而是直接使用 服务器映射 url.</li>
+</ul>
+</li>
 <li>WebSocket协议跨域</li>
 </ol>
 
