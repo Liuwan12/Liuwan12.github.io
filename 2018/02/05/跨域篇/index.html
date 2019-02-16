@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="前端小白的进阶之路">
 <meta property="og:description" content="一、同源策略 同源策略/SOP（Same origin policy）是一种约定，由Netscape公司1995年引入浏览器，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，浏览器很容易受到XSS、CSFR等攻击。所谓同源是指”协议+域名+端口”三者相同，即便两个不同的域名指向同一个ip地址，也非同源 同源策略限制以下几种行为：Cookie、LocalStorage 和 IndexDB 无">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-05T08:50:54.122Z">
+<meta property="og:updated_time" content="2019-02-03T09:29:22.511Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跨域篇">
 <meta name="twitter:description" content="一、同源策略 同源策略/SOP（Same origin policy）是一种约定，由Netscape公司1995年引入浏览器，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，浏览器很容易受到XSS、CSFR等攻击。所谓同源是指”协议+域名+端口”三者相同，即便两个不同的域名指向同一个ip地址，也非同源 同源策略限制以下几种行为：Cookie、LocalStorage 和 IndexDB 无">
@@ -179,7 +179,10 @@
 <li>同源策略限制以下几种行为：Cookie、LocalStorage 和 IndexDB 无法读取；DOM和Js对象无法获得；AJAX 请求不能发送<h3 id="跨域解决方案"><a href="#跨域解决方案" class="headerlink" title="跨域解决方案"></a>跨域解决方案</h3></li>
 </ul>
 <ol>
-<li>通过jsonp跨域</li>
+<li>通过jsonp跨域<ul>
+<li>原理：script标签请求的js代码会被执行，</li>
+</ul>
+</li>
 <li>document.domain + iframe跨域</li>
 <li>location.hash + iframe</li>
 <li>window.name + iframe跨域</li>
