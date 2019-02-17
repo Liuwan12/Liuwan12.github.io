@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="前端小白的进阶之路">
 <meta property="og:description" content="1.“==”和“===”的区别 “==”仅检查值相等，而“===”是一个更严格的等式判定，如果两个变量的值或类型不同，则返回false  123456789//==的使用情况为以下2种（其他情况下推荐使用===）if(obj.a == null)&amp;#123;//相当于obj.a === null || obj.a === undefined&amp;#125;function fn(a,b)&amp;#123;i">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-16T09:18:30.312Z">
+<meta property="og:updated_time" content="2019-02-17T12:32:51.251Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS基础学习2">
 <meta name="twitter:description" content="1.“==”和“===”的区别 “==”仅检查值相等，而“===”是一个更严格的等式判定，如果两个变量的值或类型不同，则返回false  123456789//==的使用情况为以下2种（其他情况下推荐使用===）if(obj.a == null)&amp;#123;//相当于obj.a === null || obj.a === undefined&amp;#125;function fn(a,b)&amp;#123;i">
@@ -211,6 +211,20 @@
 <li>服务器收到请求后，处理请求，返回一个http请求给客户端</li>
 <li>渲染引擎先通过请求拿到文档内容，浏览器解析HTML构建DOM树。然后将CSS解析构建CSS Rule树，将DOM树和CSS Rule树结合形成Render树，浏览器布局render树。布局完Render树之后就浏览器开始渲染页面</li>
 </ol>
+<h3 id="6-ajax原理和XmlHttpRequest对象"><a href="#6-ajax原理和XmlHttpRequest对象" class="headerlink" title="6.ajax原理和XmlHttpRequest对象"></a>6.ajax原理和XmlHttpRequest对象</h3><ul>
+<li>原理：Ajax的原理简单来说通过XmlHttpRequest对象来向服务器发异步请求，从服务器获得数据，然后用javascript来操作DOM而更新页面。这其中最关键的一步就是从服务器获得请求数据</li>
+<li>XMLHttpRequest是ajax的核心机制，它是在IE5中首先引入的，是一种支持异步请求的技术。简单的说，也就是javascript可以及时向服务器提出请求和处理响应，而不阻塞用户。达到无刷新的效果</li>
+<li>XMLHttpRequest对象的属性<ul>
+<li>onreadystatechange  每次状态改变所触发事件的事件处理程序。</li>
+<li>responseText     从服务器进程返回数据的字符串形式。</li>
+<li>responseXML    从服务器进程返回的DOM兼容的文档数据对象。</li>
+<li>status           从服务器返回的数字代码，比如常见的404（未找到）和200（已就绪）</li>
+<li>status Text       伴随状态码的字符串信息</li>
+<li>readyState       对象状态值</li>
+</ul>
+</li>
+<li>优点<br>1.最大的一点是页面无刷新，在页面内与服务器通信，给用户的体验非常好。<br>2.使用异步方式与服务器通信，不需要打断用户的操作，具有更加迅速的响应能力。<br>3.可以把以前一些服务器负担的工作转嫁到客户端，利用客户端闲置的能力来处理，减轻服务器和带宽的负担，节约空间和宽带租用成本。并且减轻服务器的负担，ajax的原则是“按需取数据”，可以最大程度的减少冗余请求，和响应对服务器造成的负担。<br>4.基于标准化的并被广泛支持的技术，不需要下载插件或者小程序</li>
+</ul>
 
       
 
