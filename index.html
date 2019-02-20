@@ -155,6 +155,77 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-小程序开发文档整理" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/03/小程序开发文档整理/">小程序开发文档整理</a>
+    </h1>
+  
+
+        
+        <a href="/2019/01/03/小程序开发文档整理/" class="archive-article-date">
+  	<time datetime="2019-01-03T10:10:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、小程序页面的生命周期"><a href="#一、小程序页面的生命周期" class="headerlink" title="一、小程序页面的生命周期"></a>一、小程序页面的生命周期</h3><ul>
+<li>onShow(),onLoad()–监听页面加载,onHide(),onLaunch()，onReady()，onUnload–监听页面卸载<h3 id="二、小程序页面间传值"><a href="#二、小程序页面间传值" class="headerlink" title="二、小程序页面间传值"></a>二、小程序页面间传值</h3></li>
+<li>url传参数</li>
+<li>本地存储</li>
+<li>全局的app对象<h3 id="三、用户授权登陆"><a href="#三、用户授权登陆" class="headerlink" title="三、用户授权登陆"></a>三、用户授权登陆</h3></li>
+<li>同一个微信开放平台下的相同主体的App、公众号、小程序的unionid是相同的，这样就可以锁定是不是同一个用户。</li>
+<li>如果用户已经关注公众号，或者曾经登录过App或公众号，则用户打开小程序时，开发者可以直接通过wx.login获取到该用户UnionID，无须用户再次授权。</li></ul>
+        
+          <a class="article-more-a" href="/2019/01/03/小程序开发文档整理/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/01/03/小程序开发文档整理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-JS基础学习2" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -835,80 +906,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/01/23/css篇/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-http协议攻略" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/05/http协议攻略/">http协议攻略</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/05/http协议攻略/" class="archive-article-date">
-  	<time datetime="2018-01-05T00:30:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、http请求报文"><a href="#一、http请求报文" class="headerlink" title="一、http请求报文"></a>一、http请求报文</h3><ul>
-<li><p>一个HTTP请求报文由<label style="color: red">请求行（request line）、请求头部（header）、空行和请求数据</label>4个部分组成<br><img src="http报文.png" alt="http报文"></p>
-<ol>
-<li>请求行,由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔:HTTP协议的请求方法有GET、POST、HEAD、PUT、DELETE、OPTIONS、TRACE、CONNECT.GET方法要求服务器将URL定位的资源放在响应报文的数据部分，回送给客户端</li>
-<li>请求头部:请求头部由关键字/值对组成，每行一对，关键字和值用英文冒号“:”分隔。请求头部通知服务器有关于客户端请求的信息，典型的请求头有：      User-Agent：产生请求的浏览器类型。<br>Accept：客户端可识别的内容类型列表。<br>Host：请求的主机名，允许多个域名同处一个IP地址，即虚拟主机。</li>
-<li>空行:最后一个请求头之后是一个空行，发送回车符和换行符，通知服务器以下不再有请求头。</li>
-<li>请求数据:请求数据不在GET方法中使用，而是在POST方法中使用。POST方法适用于需要客户填写表单的场合。与请求数据相关的最常使用的请求头是Content-Type和Content-Length。</li>
-</ol>
-<h3 id="二、http响应报文"><a href="#二、http响应报文" class="headerlink" title="二、http响应报文"></a>二、http响应报文</h3><ul>
-<li>HTTP响应也由三个部分组成，分别是：<label style="color: red">状态行、消息报头、响应正文。</label><br>http响应状态码:<br>1xx：指示信息–表示请求已接收，继续处理。</li></ul></li></ul>
-        
-          <a class="article-more-a" href="/2018/01/05/http协议攻略/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/05/http协议攻略/">展开全文 >></a>
         </p>
       
 

@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/09/28/vue知识点整理/vuestate.png">
 <meta property="og:image" content="http://yoursite.com/2018/09/28/vue知识点整理/state2.png">
-<meta property="og:updated_time" content="2019-01-09T11:10:21.633Z">
+<meta property="og:updated_time" content="2019-02-20T11:36:37.292Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue知识点整理">
 <meta name="twitter:description" content="一、MVVM设计模式的理解 MVVM是Model-View-ViewModel 的缩写，Model代表数据模型，View代表UI组件，ViewModel 监听模型数据的改变和控制视图行为、处理用户交互 在MVVM架构下，View 和 Model 之间并没有直接的联系，而是通过ViewModel进行交互，Model 和 ViewModel 之间的交互是双向的， 因此View 数据的变化会同步到Mod">
@@ -205,9 +205,21 @@
 </li>
 </ol>
 <h3 id="五、Vue的路由实现：hash模式-和-history模式"><a href="#五、Vue的路由实现：hash模式-和-history模式" class="headerlink" title="五、Vue的路由实现：hash模式 和 history模式"></a>五、Vue的路由实现：hash模式 和 history模式</h3><p><strong>hash模式</strong>：在浏览器中符号“#”，#以及#后面的字符称之为hash，用window.location.hash读取；<br>特点：hash虽然在URL中，但不被包括在HTTP请求中；用来指导浏览器动作，对服务端安全无用，hash不会重加载页面。<br><strong>history模式</strong>：history采用HTML5的新特性；且提供了两个新方法：pushState（），replaceState（）可以对浏览器历史记录栈进行修改，以及popState事件的监听到状态变更</p>
-<h3 id="六、Vue与react的区别"><a href="#六、Vue与react的区别" class="headerlink" title="六、Vue与react的区别"></a>六、Vue与react的区别</h3><ul>
+<p>####区别：</p>
+<ul>
+<li><p>hash模式背后的原理是onhashchange事件，可以在window对象上监听这个事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">window.onhashchange = function(event)&#123;</span><br><span class="line"> console.log(event.oldURL, event.newURL);</span><br><span class="line"> let hash = location.hash.slice(1); </span><br><span class="line"> document.body.style.color = hash;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>history api可以分为两大部分，切换和修改，参考MDN，切换历史状态包括back、forward、go 三个方法，对应浏览器的前进，后退，跳转操作</p>
+</li>
+<li>修改历史状态包括了pushState,replaceState，两个方法,这两个方法接收三个参数:stateObj,title,url</li>
+<li>hash 模式下，仅 hash 符号之前的内容会被包含在请求中，如 <a href="http://www.abc.com，因此对于后端来说，即使没有做到对路由的全覆盖，也不会返回" target="_blank" rel="noopener">http://www.abc.com，因此对于后端来说，即使没有做到对路由的全覆盖，也不会返回</a> 404 错误</li>
+<li>history 模式下，前端的 URL 必须和实际向后端发起请求的 URL 一致，如 <a href="http://www.abc.com/book/id。如果后端缺少对" target="_blank" rel="noopener">http://www.abc.com/book/id。如果后端缺少对</a> /book/id 的路由处理，将返回 404 错误</li>
+<li>hash有#，history没有#<h3 id="六、Vue与react的区别"><a href="#六、Vue与react的区别" class="headerlink" title="六、Vue与react的区别"></a>六、Vue与react的区别</h3><ul>
 <li>相同点： 一切都是组件，组件实例之间可以嵌套；都提供合理生命周期钩子，可以让开发者定制化地去处理需求</li>
 <li>不同点：react整体是函数式的思想，把组件设计成纯组件，状态和逻辑通过参数传入，所以在react中，是单向数据流，推崇结合immutable来实现数据不可变。而vue的思想是响应式的，也就是基于是数据可变的，通过对每一个属性建立Watcher来监听，当属性变化的时候，响应式的更新对应的虚拟dom</li>
+</ul>
+</li>
 </ul>
 <h3 id="七、vuex相关"><a href="#七、vuex相关" class="headerlink" title="七、vuex相关"></a>七、vuex相关</h3><ul>
 <li>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化</li>
