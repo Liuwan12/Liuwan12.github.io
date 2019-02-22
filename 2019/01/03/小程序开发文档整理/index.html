@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="前端小白的进阶之路">
 <meta property="og:description" content="一、小程序页面的生命周期 onShow(),onLoad()–监听页面加载,onHide(),onLaunch()，onReady()，onUnload–监听页面卸载二、小程序页面间传值 url传参数 本地存储 全局的app对象三、用户授权登陆 同一个微信开放平台下的相同主体的App、公众号、小程序的unionid是相同的，这样就可以锁定是不是同一个用户。 如果用户已经关注公众号，或者曾经登录过A">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-20T12:12:05.152Z">
+<meta property="og:updated_time" content="2019-02-20T12:38:46.951Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小程序开发文档整理">
 <meta name="twitter:description" content="一、小程序页面的生命周期 onShow(),onLoad()–监听页面加载,onHide(),onLaunch()，onReady()，onUnload–监听页面卸载二、小程序页面间传值 url传参数 本地存储 全局的app对象三、用户授权登陆 同一个微信开放平台下的相同主体的App、公众号、小程序的unionid是相同的，这样就可以锁定是不是同一个用户。 如果用户已经关注公众号，或者曾经登录过A">
@@ -185,7 +185,8 @@
 <li><p>性能优化——checkSession：前端检测有无session，没有的话wx.login()，获取session_key 。<br>  通过session_key 调用后台接口，换取session。<br>  前端缓存session。<br>  如果前端检测有session，调用wx.checkSession()，判断session_key 有效期，然后请求业务CGI</p>
 </li>
 <li><p>wx.login()获取code（有有效期），code 换取 session_key，wx.checkSession<br>检测当前用户登录态是否有效</p>
-</li>
+<h3 id="四、父子组件传值"><a href="#四、父子组件传值" class="headerlink" title="四、父子组件传值"></a>四、父子组件传值</h3></li>
+<li>this.triggerEvent(‘myevent’, myEventDetail)</li>
 </ul>
 
       
