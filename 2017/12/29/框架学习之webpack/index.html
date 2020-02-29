@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="前端小白的进阶之路">
 <meta property="og:description" content="一、概念 webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析  模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.j">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-01T09:16:55.681Z">
+<meta property="og:updated_time" content="2019-06-22T05:16:25.191Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="框架学习之webpack">
 <meta name="twitter:description" content="一、概念 webpack 是一个模块打包器，可以递归打包项目中的所有模块，最终生成打包后的文件支持code-spliting、模块化(AMD,ESM,COmmonJS)、全局分析  模块化AMD和CMD,模块加载器require.js和SeaJS，RequireJS 遵循 AMD（异步模块定义）规范，Sea.js 遵循 CMD （通用模块定义）规范。规范的不同，导致了两者 API 不同。Sea.j">
@@ -197,8 +197,13 @@
 </ol>
 <h3 id="二、webpack-dev-server"><a href="#二、webpack-dev-server" class="headerlink" title="二、webpack-dev-server"></a>二、webpack-dev-server</h3><ul>
 <li>webpack-dev-server使用内存来存储webpack开发环境下的打包文件，并且可以使用模块热更新，他比传统的http服务对开发更加简单高效<br><strong> 模块热更新 </strong></li>
-<li>模块热更新是webpack的一个功能，它可以使得代码修改过后不用刷新浏览器就可以更新，是高级版的自动刷新浏览器<h3 id="三、入口文件-entry"><a href="#三、入口文件-entry" class="headerlink" title="三、入口文件 entry"></a>三、入口文件 entry</h3></li>
+<li>模块热更新是webpack的一个功能，它可以使得代码修改过后不用刷新浏览器就可以更新，是高级版的自动刷新浏览器</li>
+</ul>
+<h3 id="三、入口文件-entry"><a href="#三、入口文件-entry" class="headerlink" title="三、入口文件 entry"></a>三、入口文件 entry</h3><ul>
 <li>output: 即使入口文件有多个，但是只有一个输出配置</li>
+</ul>
+<h3 id="四、webpack-vue-cil-中proxyTable配置接口地址代理"><a href="#四、webpack-vue-cil-中proxyTable配置接口地址代理" class="headerlink" title="四、webpack+vue-cil 中proxyTable配置接口地址代理"></a>四、webpack+vue-cil 中proxyTable配置接口地址代理</h3><ul>
+<li>在项目开发的时候，接口联调的时候一般都是同域名下，且不存在跨域的情况下进行接口联调，但是当我们现在使用vue-cli进行项目打包的时候，我们在本地启动服务器后，比如本地开发服务下是 <a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a> 这样的访问页面，但是我们的接口地址是 <a href="http://xxxx.com/save/index" target="_blank" rel="noopener">http://xxxx.com/save/index</a> 这样的接口地址，我们这样直接使用会存在跨域的请求，导致接口请求不成功，因此我们需要在打包的时候配置一下，我们进入 config/index.js 代码下如下配置即可</li>
 </ul>
 
       
@@ -357,7 +362,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 刘大碗
+    		&copy; 2020 刘大碗
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -438,6 +443,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

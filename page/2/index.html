@@ -155,6 +155,88 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-h5缓存" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/24/h5缓存/">H5缓存机制</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/24/h5缓存/" class="archive-article-date">
+  	<time datetime="2018-01-24T10:20:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="目前H5一共有6种缓存机制"><a href="#目前H5一共有6种缓存机制" class="headerlink" title="目前H5一共有6种缓存机制"></a>目前H5一共有6种缓存机制</h3><h4 id="一、浏览器缓存机制"><a href="#一、浏览器缓存机制" class="headerlink" title="一、浏览器缓存机制"></a>一、浏览器缓存机制</h4><pre><code>指通过Http协议头里的Cache-Control(Expires)和last-Modified(Etag)等字段控制缓存的机制
+</code></pre><ul>
+<li><strong>Cache-Control</strong> 用于控制文本在本地缓存有效时长</li>
+<li><strong>Last-Modified</strong> 标识文件在服务器上的最新更新时间</li>
+<li>Cache-Control 通常与 Last-Modified 一起使用。一个用于控制缓存有效时间，一个在缓存失效后，向服务查询是否有更新</li>
+<li>Cache-Control 还有一个同功能的字段：<strong>Expires</strong>。Expires 的值一个绝对的时间点，如：Expires: Thu, 10 Nov 2015 08:45:11 GMT，表示在这个时间点之前，缓存都是有效的。</li>
+<li><strong>Etag</strong> 也是和 Last-Modified 一样，对文件进行标识的字段。不同的是，Etag 的取值是一个对文件进行标识的特征字串</li>
+</ul>
+<h4 id="二、Dom-Storgage-Web-Storage-存储缓存，缓存分为localStorage、sessionStorage、cookie等"><a href="#二、Dom-Storgage-Web-Storage-存储缓存，缓存分为localStorage、sessionStorage、cookie等" class="headerlink" title="二、Dom Storgage(Web Storage)存储缓存，缓存分为localStorage、sessionStorage、cookie等"></a>二、Dom Storgage(Web Storage)存储缓存，缓存分为localStorage、sessionStorage、cookie等</h4><ul>
+<li>localStorage： 永久性的本地存储，存储在客户端的浏览器上，不会过期，直到手动删除，采用键值对的方式进行存储，存储方式为字符串<br>API有：<ol>
+<li>localStorage.setItem()存储数据</li>
+<li>localStorage.getItem()获取数据，使用localStorage.valueOf()获取全部数据</li>
+<li>localStorage.removeItem(key) 删除数据</li>
+<li>localStorage.clear()清空全部数据，localStorage.length 获取本地存储数据数量</li>
+<li>localStorage.key(N)获取第N个数据的key键值</li>
+</ol>
+<ul>
+<li>SessionStorage: 用于本地存储一个会话中的数据，只有在同一个会话中的页面才能访问，结束回话窗口关闭后数据就会消失，属于会话级别的存储</li></ul></li></ul>
+        
+          <a class="article-more-a" href="/2018/01/24/h5缓存/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/24/h5缓存/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-css篇" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -841,7 +923,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 刘大碗
+    		&copy; 2020 刘大碗
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -922,6 +1004,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
